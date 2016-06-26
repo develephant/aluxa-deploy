@@ -1,0 +1,9 @@
+rock_manifest = {
+   ["bcrypt-2.1-3.rockspec"] = "38f319697e6977e0cf4ed87f4032d841",
+   doc = {
+      ["README.md"] = "b17d0efb5adabf70f095ea6f198e1245"
+   },
+   lib = {
+      ["bcrypt.so"] = "3632c7ba8e8a710eef34fa64fb649e7a"
+   }
+}

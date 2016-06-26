@@ -1,0 +1,634 @@
+commands = {}
+dependencies = {
+   bcrypt = {
+      ["2.1-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-hmac"] = {
+      ["v1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }, {
+            constraints = {},
+            name = "luacrypto"
+         }
+      }
+   },
+   ["lua-resty-hoedown"] = {
+      ["0.9-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.08-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-s3"] = {
+      ["v1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }, {
+            constraints = {},
+            name = "lua-resty-hmac"
+         }, {
+            constraints = {},
+            name = "luasocket"
+         }, {
+            constraints = {},
+            name = "xxhash"
+         }
+      }
+   },
+   ["lua-resty-session"] = {
+      ["2.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-uuid"] = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-validation"] = {
+      ["2.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luacrypto = {
+      ["0.3.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }, {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.6.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasec = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }, {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   xxhash = {
+      ["v1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bcrypt = {
+      "bcrypt/2.1-3"
+   },
+   crypto = {
+      "luacrypto/0.3.2-1"
+   },
+   lfs = {
+      "luafilesystem/1.6.3-2"
+   },
+   lpeg = {
+      "lpeg/1.0.0-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   re = {
+      "lpeg/1.0.0-1"
+   },
+   ["resty.hmac"] = {
+      "lua-resty-hmac/v1.0-1"
+   },
+   ["resty.hoedown"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.hoedown.buffer"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.hoedown.document"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.hoedown.escape"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.hoedown.html"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.hoedown.library"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.hoedown.version"] = {
+      "lua-resty-hoedown/0.9-2"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.08-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.08-0"
+   },
+   ["resty.s3"] = {
+      "lua-resty-s3/v1.0-1"
+   },
+   ["resty.session"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.ciphers.aes"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.ciphers.none"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.encoders.base16"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.encoders.base64"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.encoders.hex"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.serializers.json"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.storage.cookie"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.storage.memcache"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.storage.memcached"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.storage.redis"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.session.storage.shm"] = {
+      "lua-resty-session/2.7-1"
+   },
+   ["resty.template"] = {
+      "lua-resty-template/1.8-1"
+   },
+   ["resty.template.html"] = {
+      "lua-resty-template/1.8-1"
+   },
+   ["resty.template.microbenchmark"] = {
+      "lua-resty-template/1.8-1"
+   },
+   ["resty.uuid"] = {
+      "lua-resty-uuid/1.1-1"
+   },
+   ["resty.validation"] = {
+      "lua-resty-validation/2.3-1"
+   },
+   ["resty.validation.ngx"] = {
+      "lua-resty-validation/2.3-1"
+   },
+   ["resty.validation.tz"] = {
+      "lua-resty-validation/2.3-1"
+   },
+   ["resty.validation.utf8"] = {
+      "lua-resty-validation/2.3-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ssl = {
+      "luasec/0.6-1"
+   },
+   ["ssl.https"] = {
+      "luasec/0.6-1"
+   },
+   xxhash = {
+      "xxhash/v1.0-1"
+   }
+}
+repository = {
+   bcrypt = {
+      ["2.1-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bcrypt = "bcrypt.so"
+            }
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-hmac"] = {
+      ["v1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luacrypto = "0.3.2-1"
+            },
+            modules = {
+               ["resty.hmac"] = "resty/hmac.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-hoedown"] = {
+      ["0.9-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.hoedown"] = "resty/hoedown.lua",
+               ["resty.hoedown.buffer"] = "resty/hoedown/buffer.lua",
+               ["resty.hoedown.document"] = "resty/hoedown/document.lua",
+               ["resty.hoedown.escape"] = "resty/hoedown/escape.lua",
+               ["resty.hoedown.html"] = "resty/hoedown/html.lua",
+               ["resty.hoedown.library"] = "resty/hoedown/library.lua",
+               ["resty.hoedown.version"] = "resty/hoedown/version.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.08-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-s3"] = {
+      ["v1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-hmac"] = "v1.0-1",
+               luacrypto = "0.3.2-1",
+               luasocket = "3.0rc1-2",
+               xxhash = "v1.0-1"
+            },
+            modules = {
+               ["resty.s3"] = "resty/s3.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-session"] = {
+      ["2.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.session"] = "resty/session.lua",
+               ["resty.session.ciphers.aes"] = "resty/session/ciphers/aes.lua",
+               ["resty.session.ciphers.none"] = "resty/session/ciphers/none.lua",
+               ["resty.session.encoders.base16"] = "resty/session/encoders/base16.lua",
+               ["resty.session.encoders.base64"] = "resty/session/encoders/base64.lua",
+               ["resty.session.encoders.hex"] = "resty/session/encoders/hex.lua",
+               ["resty.session.serializers.json"] = "resty/session/serializers/json.lua",
+               ["resty.session.storage.cookie"] = "resty/session/storage/cookie.lua",
+               ["resty.session.storage.memcache"] = "resty/session/storage/memcache.lua",
+               ["resty.session.storage.memcached"] = "resty/session/storage/memcached.lua",
+               ["resty.session.storage.redis"] = "resty/session/storage/redis.lua",
+               ["resty.session.storage.shm"] = "resty/session/storage/shm.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.8-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.template"] = "resty/template.lua",
+               ["resty.template.html"] = "resty/template/html.lua",
+               ["resty.template.microbenchmark"] = "resty/template/microbenchmark.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-uuid"] = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.uuid"] = "resty/uuid.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-validation"] = {
+      ["2.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.validation"] = "resty/validation.lua",
+               ["resty.validation.ngx"] = "resty/validation/ngx.lua",
+               ["resty.validation.tz"] = "resty/validation/tz.lua",
+               ["resty.validation.utf8"] = "resty/validation/utf8.lua"
+            }
+         }
+      }
+   },
+   luacrypto = {
+      ["0.3.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               crypto = "crypto.so"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.6.3-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luasec = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               ssl = "ssl.lua",
+               ["ssl.https"] = "ssl/https.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   xxhash = {
+      ["v1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               xxhash = "xxhash.so"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,33 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "d73f983510331984e9d5f48766281f37",
+      ["README.md"] = "559741255e91bd89dabf6d496f91193a"
+   },
+   lua = {
+      resty = {
+         session = {
+            ciphers = {
+               ["aes.lua"] = "ce3d9349cfafa671c5c5b5b8a4f78d10",
+               ["none.lua"] = "4ed1c5619f2e91d9abdc6c8fd0daeefd"
+            },
+            encoders = {
+               ["base16.lua"] = "f7d1b6ee813e1ebbc271305c44c1c5b1",
+               ["base64.lua"] = "a185fac1583c34db93e360674bf262a7",
+               ["hex.lua"] = "c2bd7f016fc20a18c653abcdc310a404"
+            },
+            serializers = {
+               ["json.lua"] = "f5abd0b1228f4c2b6be9c50e44559dda"
+            },
+            storage = {
+               ["cookie.lua"] = "244bded1106bfce31555d36152297aa5",
+               ["memcache.lua"] = "989b326a992f6e0e336bcc995ca7de93",
+               ["memcached.lua"] = "07c2fc41117dd550b15c6ef69e37815f",
+               ["redis.lua"] = "d8945cff9e5d0ab95015d7eff5e350cd",
+               ["shm.lua"] = "0c250c8f82358730d33615fc90b8b323"
+            }
+         },
+         ["session.lua"] = "90cc87399bfc46d6614281e0b67ff45a"
+      }
+   },
+   ["lua-resty-session-2.7-1.rockspec"] = "d1582b4e53f934ce92db5c42abd52ef3"
+}

@@ -1,0 +1,11 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "29342b23bcafe0534e400f29c84c1b48"
+   },
+   lua = {
+      resty = {
+         ["s3.lua"] = "5ee5eecef29085f369d018768cc693b2"
+      }
+   },
+   ["lua-resty-s3-v1.0-1.rockspec"] = "524899a54b9fcb0c99c3008107ab9a5c"
+}
