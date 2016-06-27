@@ -21,7 +21,7 @@ SessionEndedRequest.new = function(request_tbl)
   end
 
   m.getSessionId = function()
-    return t.session.session.Id
+    return t.session.sessionId
   end
 
   m.getApplication = function()
