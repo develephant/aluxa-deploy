@@ -1,6 +1,10 @@
 local resp = {}
 
 function resp.tell( speech, attr, card, type )
+  if card then
+    card = card:get()
+  end
+
   local m =
   {
     version = "1.0",
@@ -12,7 +16,7 @@ function resp.tell( speech, attr, card, type )
         type = "PlainText",
         text = speech
       },
-      card = card:get() or nil,
+      card = card or nil,
       shoudEndSession = true
     }
   }
@@ -22,6 +26,10 @@ function resp.tell( speech, attr, card, type )
 end
 
 function resp.ask( speech, prompt, attr, card, type )
+  if card then
+    card = card:get()
+  end
+
   local m =
   {
     version = "1.0",
@@ -33,7 +41,7 @@ function resp.ask( speech, prompt, attr, card, type )
         type = "PlainText",
         text = speech
       },
-      card = card:get() or nil,
+      card = card or nil,
       reprompt =
       {
         outputSpeech =
