@@ -4,7 +4,7 @@ function resp.tell( speech, attr, card, type )
   local m =
   {
     version = "1.0",
-    sessionAttributes = attr or {},
+    sessionAttributes = attr or nil,
     response =
     {
       outputSpeech =
@@ -12,7 +12,7 @@ function resp.tell( speech, attr, card, type )
         type = "PlainText",
         text = speech
       },
-      card = card or {},
+      card = card or nil,
       shoudEndSession = true
     }
   }
@@ -25,7 +25,7 @@ function resp.ask( speech, prompt, attr, card, type )
   local m =
   {
     version = "1.0",
-    sessionAttributes = attr or {},
+    sessionAttributes = attr or nil,
     response =
     {
       outputSpeech =
@@ -33,7 +33,7 @@ function resp.ask( speech, prompt, attr, card, type )
         type = "PlainText",
         text = speech
       },
-      card = card or {},
+      card = card or nil,
       reprompt =
       {
         outputSpeech =
