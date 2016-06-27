@@ -12,7 +12,7 @@ function resp.tell( speech, attr, card, type )
         type = "PlainText",
         text = speech
       },
-      card = card or nil,
+      card = card:get() or nil,
       shoudEndSession = true
     }
   }
@@ -33,7 +33,7 @@ function resp.ask( speech, prompt, attr, card, type )
         type = "PlainText",
         text = speech
       },
-      card = card or nil,
+      card = card:get() or nil,
       reprompt =
       {
         outputSpeech =
