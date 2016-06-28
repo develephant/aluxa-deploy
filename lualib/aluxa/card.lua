@@ -46,6 +46,10 @@ Card.new = function(type)
   end
 
   function c:get()
+    if (self.cardObj.image.smallImageUrl == nil) and (self.cardObj.image.largeImageUrl == nil) then
+      self.cardObj.image = nil
+    end
+
     return self.cardObj
   end
 
