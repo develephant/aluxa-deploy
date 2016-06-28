@@ -11,6 +11,7 @@ function m:new( database, collection )
   self.collection = collection or nil
 
   local mongol = require('resty.mongol')
+  local ResultSet = require('aluxa.dsResultSet')
 
   self.mongo = mongol:new()
   local ok, err = self.mongo:connect('127.0.0.1')
@@ -37,7 +38,10 @@ function m:new( database, collection )
       rec._id = rec._id:tostring()
       table.insert( recs, rec )
     end
-    return true, recs
+
+    local recSet = ResultSet.new(recs)
+
+    return true, recs, recSet
   end
 
   self.update = function( update_query, update_obj, single )
